@@ -1,0 +1,28 @@
+# Learn more about configuring your app at https://shopify.dev/docs/apps/tools/cli/configuration
+
+client_id = "74b1683567a6a07459a1fb1f177e14e3"
+name = "qrcode-app"
+application_url = "https://lung-eq-hughes-downtown.trycloudflare.com"
+embedded = true
+
+[build]
+automatically_update_urls_on_dev = true
+dev_store_url = "bonobo-hab.myshopify.com"
+include_config_on_deploy = true
+
+[access_scopes]
+# Learn more at https://shopify.dev/docs/apps/tools/cli/configuration#access_scopes
+scopes = "write_products"
+
+[auth]
+redirect_urls = [
+  "https://lung-eq-hughes-downtown.trycloudflare.com/auth/callback",
+  "https://lung-eq-hughes-downtown.trycloudflare.com/auth/shopify/callback",
+  "https://lung-eq-hughes-downtown.trycloudflare.com/api/auth/callback"
+]
+
+[webhooks]
+api_version = "2024-01"
+
+[pos]
+embedded = false
