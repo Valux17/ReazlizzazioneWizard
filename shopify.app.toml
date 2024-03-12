@@ -2,7 +2,7 @@
 
 client_id = "74b1683567a6a07459a1fb1f177e14e3"
 name = "qrcode-app"
-application_url = "https://lung-eq-hughes-downtown.trycloudflare.com"
+application_url = "https://cir-forwarding-ga-chat.trycloudflare.com"
 embedded = true
 
 [build]
@@ -16,9 +16,9 @@ scopes = "write_products"
 
 [auth]
 redirect_urls = [
-  "https://lung-eq-hughes-downtown.trycloudflare.com/auth/callback",
-  "https://lung-eq-hughes-downtown.trycloudflare.com/auth/shopify/callback",
-  "https://lung-eq-hughes-downtown.trycloudflare.com/api/auth/callback"
+  "https://cir-forwarding-ga-chat.trycloudflare.com/auth/callback",
+  "https://cir-forwarding-ga-chat.trycloudflare.com/auth/shopify/callback",
+  "https://cir-forwarding-ga-chat.trycloudflare.com/api/auth/callback"
 ]
 
 [webhooks]
