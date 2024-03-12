@@ -2,10 +2,11 @@
 
 client_id = "96c2b6fc3341d705bd2b4e4246428ee7"
 name = "qrcode-app"
-application_url = "https://shopify.dev/apps/default-app-home"
+application_url = "https://perfect-climb-operated-nights.trycloudflare.com"
 embedded = true
 
 [build]
+automatically_update_urls_on_dev = true
 dev_store_url = "bonobo-hab.myshopify.com"
 include_config_on_deploy = true
 
@@ -14,7 +15,11 @@ include_config_on_deploy = true
 scopes = ""
 
 [auth]
-redirect_urls = [ "https://shopify.dev/apps/default-app-home/api/auth" ]
+redirect_urls = [
+  "https://perfect-climb-operated-nights.trycloudflare.com/auth/callback",
+  "https://perfect-climb-operated-nights.trycloudflare.com/auth/shopify/callback",
+  "https://perfect-climb-operated-nights.trycloudflare.com/api/auth/callback"
+]
 
 [webhooks]
 api_version = "2024-01"

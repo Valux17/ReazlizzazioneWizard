@@ -2,7 +2,6 @@ import {
     Box,
     Card,
     Layout,
-    Link,
     List,
     Page,
     Text,
@@ -10,6 +9,7 @@ import {
     IndexTable,
     Badge,
   } from "@shopify/polaris";
+  import { useLoaderData, Link, useNavigate } from "@remix-run/react";
 
   const righe = [
   ];
@@ -39,18 +39,28 @@ import {
     ),
   );
 
-  // creazione della tabella divisa in tre colonne se c'è almeno un'elemento
-  export default function Wizard() {
+ 
+  
+  export default function Index() {
+   // const { qrCodes } = useLoaderData();
+    const navigate = useNavigate();
     return (
       <Page>
-      <ui-title-bar title="Wizard" >
-        <button variant="primary" onClick={() => navigate("/app/wizard/new")}>
+  
+        {/*<a href="/app/wizard/new">
+        <button variant="primary" >
           new wizard
+        </button>
+    </a>*/}
+        <ui-title-bar title="QR code">
+        <button variant="primary" onClick={() => navigate("/app/wizard/new")}>
+          
+          New Wizard
         </button>
       </ui-title-bar>
       <Layout>
-        <Layout.Section>{
-          (rows.length) ?
+        <Layout.Section>
+          
             <IndexTable
             headings={[
               {title: 'id'},
@@ -63,21 +73,8 @@ import {
             >
               {rowMarkup} 
             </IndexTable>
-          :
-            <LegacyCard sectioned>
-              <EmptyState
-                heading="Manage your inventory transfers"
-                action={{content: 'Add transfer'}}
-                secondaryAction={{
-                  content: 'Learn more',
-                  url: 'https://help.shopify.com',
-                }}
-                image="https://cdn.shopify.com/s/files/1/0262/4071/2726/files/emptystate-files.png"
-              >
-              <p>Track and receive your incoming inventory from suppliers.</p>
-              </EmptyState>
-            </LegacyCard>
-          }   
+        
+               
         </Layout.Section>
         </Layout>
       </Page>
